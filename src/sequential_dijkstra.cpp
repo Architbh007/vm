@@ -214,7 +214,6 @@ int main(int argc, char* argv[]) {
     cout << "\nSource:      " << source << "\n";
     cout << "Destination: " << destination << "\n";
     cout << "Algorithm:   " << (useAStar ? "Dijkstra + A*" : "Standard Dijkstra") << "\n";
-    cout << "===========================================\n\n";
     
     // Run algorithm
     cout << "Computing shortest path...\n";

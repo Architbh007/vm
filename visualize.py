@@ -30,7 +30,7 @@ colors = {
 graph_sizes = df['Graph_Size'].unique()
 graph_sizes.sort()
 
-# ===== Plot 1: Execution Time Comparison =====
+#Plot 1: Execution Time Comparison 
 ax1 = fig.add_subplot(gs[0, :])
 x = np.arange(len(graph_sizes))
 width = 0.15
@@ -73,7 +73,7 @@ ax1.legend(fontsize=9)
 ax1.grid(True, alpha=0.3, axis='y')
 ax1.set_yscale('log')
 
-# ===== Plot 2: Local Speedup Analysis =====
+#Plot 2: Local Speedup Analysis
 ax2 = fig.add_subplot(gs[1, 0])
 x = np.arange(len(graph_sizes))
 width = 0.35
@@ -103,7 +103,7 @@ ax2.set_xticklabels([f'{s//1000}K' for s in graph_sizes])
 ax2.legend(fontsize=8)
 ax2.grid(True, alpha=0.3, axis='y')
 
-# ===== Plot 3: Multi-VM Overhead =====
+#Plot 3: Multi-VM Overhead
 ax3 = fig.add_subplot(gs[1, 1])
 x = np.arange(len(graph_sizes))
 width = 0.35
@@ -134,7 +134,7 @@ ax3.legend(fontsize=8)
 ax3.grid(True, alpha=0.3, axis='y')
 ax3.set_yscale('log')
 
-# ===== Plot 4: Parallel Efficiency =====
+#  Plot 4: Parallel Efficiency 
 ax4 = fig.add_subplot(gs[1, 2])
 x = np.arange(len(graph_sizes))
 width = 0.2
@@ -172,7 +172,7 @@ ax4.set_xticklabels([f'{s//1000}K' for s in graph_sizes])
 ax4.legend(fontsize=7)
 ax4.grid(True, alpha=0.3, axis='y')
 
-# ===== Plot 5-7: Iteration Counts =====
+# Plot 5-7: Iteration Counts
 for idx, size in enumerate([10000, 20000, 30000]):
     ax = fig.add_subplot(gs[2, idx])
     

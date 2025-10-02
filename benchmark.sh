@@ -1,9 +1,7 @@
 #!/bin/bash
 
-echo "=========================================="
 echo "SIT315 Distributed Pathfinding Benchmark"
 echo "Multi-VM Testing Configuration"
-echo "=========================================="
 
 # Configuration
 SIZES=(10000 15000 20000 25000 30000)
@@ -15,14 +13,13 @@ OUTPUT="benchmark_results.csv"
 # Step 1: Clean and Compile
 echo ""
 echo "Step 1: Cleaning and compiling..."
-echo "----------------------------------------"
 make clean
 make
 if [ $? -ne 0 ]; then
     echo "Compilation failed!"
     exit 1
 fi
-echo "✓ Compilation successful"
+echo " Compilation successful"
 
 # Step 2: Generate Graphs
 echo ""
@@ -39,7 +36,7 @@ for SIZE in "${SIZES[@]}"; do
         echo "Graph $SIZE already exists, skipping..."
     fi
 done
-echo "✓ All graphs ready"
+echo "All graphs ready"
 
 # Step 3: Run Benchmarks
 echo ""
